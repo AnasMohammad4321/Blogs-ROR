@@ -1,6 +1,6 @@
-# My Awesome Blog
+# My Blog
 
-Welcome to My Awesome Blog! This is a blog application built with Ruby on Rails that allows you to create, manage, and share articles.
+Welcome to My Blog! This is a blog application built with Ruby on Rails that allows you to create, manage, and share articles.
 
 ## Features
 
@@ -13,12 +13,11 @@ Welcome to My Awesome Blog! This is a blog application built with Ruby on Rails 
 
 1. Clone the repository.
 2. Install the dependencies.
-3. Set up the database.
 4. Start the server.
 
 ## Usage
 
-- Sign up for an account to create your own articles and interact with the community.
+- Create your own articles and interact with the community.
 - Browse existing articles on the homepage.
 - Leave comments on articles to share your thoughts and engage in discussions.
 - Edit or delete your own articles as needed.
