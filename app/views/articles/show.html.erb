@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .comments {
+      margin-bottom: 20px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+    }
+
+    .comment strong {
+      font-weight: bold;
+    }
+
+    .comment .comment-body {
+      margin-top: 5px;
+    }
+
+    .add-comment {
+      margin-bottom: 20px;
+    }
+
+    .add-comment label {
+      font-weight: bold;
+    }
+
+    .add-comment input[type="text"],
+    .add-comment textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .add-comment textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .add-comment input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .add-comment input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @article.title %></h1>
+
+  <p><%= @article.body %></p>
+
+  <ul>
+    <li><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li>
+      <%= link_to "Destroy", article_path(@article), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </li>
+  </ul>
+
+  <h2>Comments</h2>
+  <div class="comments">
+    <%= render @article.comments %>
+  </div>
+
+  <h2>Add a comment:</h2>
+  <div class="add-comment">
+    <%= render 'comments/form' %>
+  </div>
+</body>
+</html>
